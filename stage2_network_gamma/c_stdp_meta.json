@@ -1,0 +1,28 @@
+{
+  "script": "run_c_stdp.py",
+  "i_mu": 0.85,
+  "g_kv3": 40.0,
+  "n_pv": 100,
+  "dt_ms": 0.025,
+  "f_tacs": 40.0,
+  "amp_tacs": 2.0,
+  "w_init": 1.0,
+  "w_min": 0.3,
+  "w_max": 2.0,
+  "a_mag": 0.0,
+  "tau_decay_ms": 120000.0,
+  "stim_s": 30.0,
+  "post_s": 60.0,
+  "save_spikes": true,
+  "post_window_s": [
+    25.0,
+    45.0
+  ],
+  "arms": {
+    "ltd": "max(0, +cos)",
+    "ltp": "max(0, -cos)"
+  },
+  "rule": "uniform update every 1 ms from the tACS phase, dw = sign*A*max(0,+/-cos(2*pi*(phase-0.25)))*(w-w_min)/(w_init-w_min), clipped to [w_min,w_max]; NOT pre/post spike-timing dependent",
+  "python": "3.11.17",
+  "brian2": "2.7.1"
+}

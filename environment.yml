@@ -1,0 +1,13 @@
+name: mleDSar
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - brian2=2.7
+  - numpy=1.26          # brian2 2.7 is not compatible with numpy 2.x (np.ndarray.ptp removed)
+  - cython=0.29         # brian2 2.7 codegen target does not support Cython 3.x
+  - scipy
+  - matplotlib
+  - pandas
+  - statsmodels
+  - pytest

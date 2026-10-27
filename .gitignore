@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+*.prof
+*.lprof
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.png.bak
+
+# raw spike trains: regenerated with --save-spikes, archived with the release
+stage2_network_gamma/c_spikes/
+stage2_network_gamma/a2_spikes/
+
+# failed cpp_standalone build output
+outputs/bench_cpp/
+
+# copyright-protected reference full texts -- never part of the repository
+重要参考文章md/

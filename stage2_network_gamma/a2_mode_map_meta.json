@@ -1,0 +1,41 @@
+{
+  "script": "run_a2_mode_map.py",
+  "i_mu": 0.85,
+  "n_pv": 100,
+  "dt_ms": 0.025,
+  "f_tacs": 40.0,
+  "t_end_ms": 9000.0,
+  "tacs_window": [
+    5000.0,
+    2000.0
+  ],
+  "readout": [
+    5000.0,
+    7000.0
+  ],
+  "states": {
+    "EO": 40.0,
+    "EC": 0.0
+  },
+  "g_grid": [
+    0.0,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "amp_grid": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "itbs_protocol": "5 Hz x 20 ms x 10 bursts over 2 s, g_GABA_B=0.005 mS/cm2",
+  "save_spikes": true
+}

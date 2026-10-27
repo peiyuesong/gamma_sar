@@ -1,0 +1,36 @@
+{
+  "script": "run_a1_pilot.py",
+  "python": "3.11.17",
+  "brian2": "2.7.1",
+  "i_mu": 0.85,
+  "n_pv": 100,
+  "dt_ms": 0.025,
+  "g_gabab": 0.005,
+  "f_tacs": 40.0,
+  "amp_tacs": 2.0,
+  "itbs_protocol": "5 Hz x 20 ms x 10 bursts over 2 s, g_GABA_B=0.005 mS/cm2",
+  "conditions": [
+    "Sham",
+    "iTBS",
+    "Concurrent",
+    "Sequential"
+  ],
+  "windows": {
+    "W1": [
+      1000.0,
+      3000.0
+    ],
+    "W2": [
+      3000.0,
+      5000.0
+    ]
+  },
+  "g_kv3": {
+    "EO": 40.0,
+    "EC": 0.0
+  },
+  "note": "Sequential = tACS 2000 ms after iTBS offset; with Destexhe kinetics (r decay ~1/K2 ~ 830 ms, s decay ~1/K4 ~ 130 ms) the network has essentially recovered by then, so Sequential is expected to approach Sham. Concurrent is the informative arm.",
+  "seeds": [
+    42
+  ]
+}
